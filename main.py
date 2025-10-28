@@ -41,11 +41,15 @@ def fetch_issues():
 
     # API Parameters for filtering issues by label and state
     API_PARAM = {
-        "labels": "Request",
         "state": "open",
     }
 
-    issue_response = requests.get(url=ISSUE_API_URL, params=API_PARAM)
+    headers = {
+        "Authorization": f"Bearer {GITHUB_PAT}",
+        "Accept": "application/vnd.github.v3+json"
+    }
+
+    issue_response = requests.get(url=ISSUE_API_URL, params=API_PARAM, headers=headers)
     if issue_response.status_code == 200:
         return issue_response.json()
     else:
