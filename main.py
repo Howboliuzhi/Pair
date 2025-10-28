@@ -15,10 +15,10 @@ PATH = os.path.abspath(os.path.dirname(__file__))
 os.chdir(PATH)
 
 # Set up GitHub repository details
-repository_name = 'Get-Pair-Extraordinaire'
+repository_name = 'Pair'
 branch_name = None
-AUTHOR_NAME = 'Prakash4844'
-AUTHOR_EMAIL = os.environ.get('GIT_EMAIL', '81550376+Prakash4844@users.noreply.github.com')
+AUTHOR_NAME = 'Howboliuzhi'
+AUTHOR_EMAIL = os.environ.get('GIT_EMAIL', '49313639+Howboliuzhi@users.noreply.github.com')
 
 # Get GITHUB_TOKEN from GitHub secrets
 GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN')
